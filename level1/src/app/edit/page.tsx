@@ -85,8 +85,9 @@ function Page() {
               type="text"
               placeholder="Enter your name"
               className="w-full border-b border-white py-2 px-1 bg-black text-white placeholder-gray-400"
+              // This ensures React always sees a string, even if 'name' is null or undefined
+              value={name || ""}
               onChange={(e) => setName(e.target.value)}
-              value={name}
             />
           </div>
           <button
